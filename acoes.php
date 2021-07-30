@@ -2,7 +2,7 @@
 <?php //687f3d8305a7d6b7c0199f504446559b - My key 
 // api.openweathermap.org/data/2.5/weather?q={CIDADE}&appid={MYKEY}
 
-require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/vendor/autoload.php";
 
 session_start();
 

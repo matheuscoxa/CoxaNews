@@ -39,7 +39,7 @@
 
 <body class="body">
   <div class="texto"><b>CLIMA E TEMPO DA SUA CIDADE</b></div>
-  <img class="imagem" src="../api/img/imagem.jpg">
+  <img class="imagem" src="img/imagem.jpg">
   <div></div>
   <form action="acoes.php?acao=obter_tempo" method="post">
     <div>
