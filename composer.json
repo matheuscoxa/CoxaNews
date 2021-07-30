@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jpdik/request": "^1.1"
+    }
+}

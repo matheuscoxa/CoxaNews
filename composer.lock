@@ -1,0 +1,71 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "26eccb73414368177ce9acb4af52bf81",
+    "packages": [
+        {
+            "name": "jpdik/request",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpdik/request.git",
+                "reference": "f0d06494ef4e5c16b119848e5f80e1fffa1e9b4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jpdik/request/zipball/f0d06494ef4e5c16b119848e5f80e1fffa1e9b4b",
+                "reference": "f0d06494ef4e5c16b119848e5f80e1fffa1e9b4b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "http",
+            "autoload": {
+                "psr-0": {
+                    "jpdik": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "João Paulo",
+                    "email": "jpmdik@gmail.com",
+                    "homepage": "https://www.jpmdik.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple request class",
+            "homepage": "https://github.com/jpdik/request",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "http-message",
+                "jpdik",
+                "request",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/jpdik/request/issues",
+                "source": "https://github.com/jpdik/request/tree/1.1"
+            },
+            "time": "2021-07-28T17:29:49+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
