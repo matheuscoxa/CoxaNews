@@ -59,9 +59,7 @@ $tempo = $_SESSION['tempo'];
         <td><?php echo $tempo->sys->country; ?></td>
         <td><?php echo $tempo->coord->lon; ?></td>
         <td><?php echo $tempo->coord->lat; ?></td>
-        <td><?php foreach ($a as  $b) {
-          echo $tempo->weather->description; ?></td>
-        <?php } ?>
+       
 
       </tr>
     </tbody>
