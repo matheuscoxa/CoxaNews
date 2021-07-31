@@ -5,29 +5,25 @@ $tempo = $_SESSION['tempo'];
 
 ?>
 <style>
-  .thead {
-    background-color: darkGray;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    color: black;
-  }
-
-  .table {
-    width: auto;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-
-  }
-
   .body {
+    background-image: url('https://static.tumblr.com/63fb97f531ca3d7ec59e5a36b25cd978/tjpq0as/3Z6pi43ln/tumblr_static_-513610465-content_2048_v2.gif');
+    background-position: center;
+    background-size: cover;
     align-items: center;
     justify-items: center;
     background-color: lavender;
+
+  }
+
+  .nome {
+    font-size: 70;
+    margin-left: 38%;
+    margin-top: 10px;
+  }
+
+  .lonlat {
+    margin-top: 500px;
+    font-family: monospace;
   }
 </style>
 
@@ -42,29 +38,17 @@ $tempo = $_SESSION['tempo'];
 </head>
 
 <body class="body">
-  <table class="table">
-    <thead class="thead">
-      <tr>
-        <td>Nome</td>
-        <td>País</td>
-        <td>Longetude</td>
-        <td>Latitude</td>
-        <td>Velocidade do</td>
+  <div><?php echo $tempo->sys->country; ?>
+  </div>
+  <div class="nome">
+    <?php echo $tempo->name; ?>
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><?php echo $tempo->name; ?></td>
-        <td><?php echo $tempo->sys->country; ?></td>
-        <td><?php echo $tempo->coord->lon; ?></td>
-        <td><?php echo $tempo->coord->lat; ?></td>
-       
-
-      </tr>
-    </tbody>
-  </table>
+  </div>
+  <div class="lonlat">
+    <?php echo "Longitude: " . $tempo->coord->lon; ?>
+    <?php echo "Latitude: " . $tempo->coord->lat; ?>
+  </div>
+  </div>
 </body>
 
 </html>
-        
