@@ -15,7 +15,7 @@
     .imagem {
       margin: 50px 10px;
       width: 225px;
-      border-radius: 100%;
+      border-radius: 32%;
     }
 
     .body {
@@ -46,7 +46,7 @@
 
 <body class="body">
   <div class="texto"><b>CLIMA E TEMPO DA SUA CIDADE</b></div>
-  <img class="imagem" src="img/imagem.jpg">
+  <img class="imagem" src="img/imagem.png">
 
   <form action="acoes.php?acao=obter_tempo" method="post">
     <div>
