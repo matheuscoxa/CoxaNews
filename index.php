@@ -19,8 +19,12 @@
     }
 
     .body {
+      background-image: url('https://i2.wp.com/wallpaperaccess.com/full/1250040.jpg ');
+      background-position: center;
+      background-size: cover;
+      align-items: center;
+      justify-items: center;
       text-align: center;
-      background-color: lavender;
     }
 
     .button {
@@ -28,13 +32,13 @@
       background-color: #008CBA;
       font-size: 18px;
       padding: 10px 24px;
-
-
-
     }
 
     .texto {
       margin-top: 50px;
+      font-family: math;
+      font-size: x-large;
+      color: DodgerBlue;
     }
   </style>
 </head>
