@@ -19,7 +19,7 @@
     }
 
     .body {
-      background-image: url('https://i2.wp.com/wallpaperaccess.com/full/1250040.jpg ');
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStagONP0cQH0-0HC6yJ0YDy2xD0pnspdNDQA&usqp=CAU');
       background-position: center;
       background-size: cover;
       align-items: center;
@@ -38,7 +38,7 @@
       margin-top: 50px;
       font-family: math;
       font-size: x-large;
-      color: DodgerBlue;
+      color: #4682B4	;
     }
   </style>
 </head>
@@ -47,11 +47,11 @@
 <body class="body">
   <div class="texto"><b>CLIMA E TEMPO DA SUA CIDADE</b></div>
   <img class="imagem" src="img/imagem.jpg">
-  <div></div>
+
   <form action="acoes.php?acao=obter_tempo" method="post">
     <div>
       <input id="campo" name="campo" type="text" placeholder="Cidade">
-      <button type="submit" class="btn btn-primary btn-small">Consultar</button>
+      <button type="submit" class="btn btn-outline-primary">Consultar</button>
     </div>
     <div id="resultado">
     </div>

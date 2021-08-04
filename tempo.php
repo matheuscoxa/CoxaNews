@@ -28,6 +28,24 @@ $tempo = $_SESSION['tempo'];
     margin-top: 30%;
     font-family: monospace;
   }
+
+  .voltar {
+    color: white;
+    padding: 8px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 7px;
+    background-color: silver;
+    color: black;
+    border: 2px solid silver;
+    
+  }
+
+  .vtr{
+    margin: 7px 5px;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -55,11 +73,10 @@ $tempo = $_SESSION['tempo'];
     <div><?php echo $tempo->weather[0]->description; ?></div>
   </div>
 
-  <div><?php echo "Velocidade do vento: " . ($tempo->wind->speed) ."KM/h" ?></div>
+  <div><?php echo "Velocidade do vento: " . ($tempo->wind->speed) . "KM/h" ?></div>
 
   <div>
-    <div class="max"><?php echo " MAX: " . number_format((($tempo->main->temp_max / 5) - 32) * 5 / 9) . "°" ?> </div>
-    <div class="min"><?php echo " MIN: " . number_format((($tempo->main->temp_min / 5) - 32) * 5 / 9) . "°" ?></div>
+    <div class="max"><?php echo " TEMP: " . number_format((($tempo->main->temp_max / 5) - 32) * 5 / 9) . "°" ?> </div>
     <div class="umidade"><?php echo "UMIDADE: " . $tempo->main->humidity ?> </div>
   </div>
 
@@ -71,5 +88,9 @@ $tempo = $_SESSION['tempo'];
   </div>
   </div>
 </body>
+
+<footer>
+ <div class="vtr"> <a href="index.php" class="voltar">Voltar</a></div>
+</footer>
 
 </html>
