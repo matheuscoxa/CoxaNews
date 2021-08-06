@@ -10,6 +10,7 @@ use jpdik\Request;
 
 define("API_KEY", "687f3d8305a7d6b7c0199f504446559b");
 define("LANG", "&lang=pt_br");
+define("UNITS", "&units=metric");
 
 header('Content-type:application/json;charset=utf-8');
 
@@ -19,7 +20,7 @@ if ($_GET['acao'] == 'obter_tempo') {
 
 $req = new Request("https://api.openweathermap.org/data/2.5");
 
-$res = $req->get("/weather", "?q=$_POST[campo]&appid=" . API_KEY . LANG);
+$res = $req->get("/weather", "?q=$_POST[campo]&appid=" . API_KEY . UNITS . LANG);
 
 $status = $req->getStatusCode();
 

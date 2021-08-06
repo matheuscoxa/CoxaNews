@@ -15,7 +15,7 @@
     .imagem {
       margin: 50px 10px;
       width: 225px;
-      border-radius: 32%;
+      border-radius: 100%;
     }
 
     .body {

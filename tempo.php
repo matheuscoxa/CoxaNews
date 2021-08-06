@@ -48,7 +48,7 @@ $tempo = $_SESSION['tempo'];
 
   .vtr {
     margin: 22px 14px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -74,13 +74,24 @@ $tempo = $_SESSION['tempo'];
     margin-right: 100px;
   }
 
-  .velumi{
+  .velumi {
     font-size: 32;
     font-family: system-ui;
     margin-right: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+
+
+  .drop {
+    background-color: #0288d1;
+    height: 50px;
+    width: 50px;
+    border-radius: 0% 50% 50% 50%;
+    transform: rotate(45deg);
+    box-shadow: inset 0px 10px 10px -7px #03a9f4
   }
 </style>
 
@@ -103,7 +114,7 @@ $tempo = $_SESSION['tempo'];
   <div class="nome">
     <?php echo $tempo->name; ?>
   </div>
-  <div class="temperatura"><?php echo number_format((($tempo->main->temp / 5) - 32) * 5/9) . "°" ?> </div>
+  <div class="temperatura"><?php echo number_format($tempo->main->temp) . "°" ?> </div>
 
 
   <div>
@@ -115,10 +126,15 @@ $tempo = $_SESSION['tempo'];
 
 
     <div class="velumi">
-    <div><?php echo "Vento: " . $tempo->wind->speed . "KM/h" ?></div>
-    <div>
-      <div class="umidade"><?php echo "UMIDADE: " . $tempo->main->humidity . "%" ?> </div>
-    </div>
+      <div><?php echo "Vento: " . $tempo->wind->speed . "KM/h" ?></div>
+      <div>
+        <div>
+        <div class="drop">
+          <!-- GOTA CSS -->
+        </div>
+        <div class="umidade"><?php echo  $tempo->main->humidity . "%" ?> </div>
+        </div>
+      </div>
     </div>
     <div class="lonlat">
       <?php echo "Longitude: " . $tempo->coord->lon; ?>
