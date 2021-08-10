@@ -37,7 +37,7 @@ $tempo = $_SESSION['tempo'];
         </div>
         <div class="card-body">
           <div class="temperatura"><?php echo number_format($tempo->main->temp) . "°" ?>
-            <img src="http://openweathermap.org/img/wn/<?php echo $tempo->weather[0]->icon ?>@2x.png">
+            <img class="iconImage" src="http://openweathermap.org/img/wn/<?php echo $tempo->weather[0]->icon ?>@2x.png">
           </div>
 
         </div>
@@ -49,9 +49,9 @@ $tempo = $_SESSION['tempo'];
 
   <div class="row">
     <div class="col-8 offset-2 d-flex align-items-center justify-content-center">
-      <div class="card text-dark bg-light mb-3 cartao">
+      <div class="card text-dark bg-light cartao">
         <!---- <div class="card-header">Header</div> -->
-        <div class="card-body">
+        <div class="card-body p-0">
           <div class="icon">
             <div class="estado"><?php echo ucfirst($tempo->weather[0]->description); ?></div>
 
@@ -69,11 +69,10 @@ $tempo = $_SESSION['tempo'];
           </div>
           <div class="lonlat">
             <div class="card-footer">
-              <div class="lonlat"> 
-                <?php echo "Longitude: " . $tempo->coord->lon; ?>
-                <?php echo "Latitude: " . $tempo->coord->lat; ?>
+              <div class="lonlat">
+             <!-- <a class="btn btn-primary" href="https://maps.google.com/?q= <?php // echo $tempo->coord->lat ?>,<?php //echo $tempo->coord->lon ?>" onClick="window.open('https://maps.google.com/?q=<?php //echo $tempo->coord->lat ?>,<?php //echo $tempo->coord->lon ?>'); return false;">Ver no mapa</a> --->
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14885.726157468858!2d<?php echo $tempo->coord->lon ?>!3d<?php echo $tempo->coord->lat ?>!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1628599169992!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -83,7 +82,7 @@ $tempo = $_SESSION['tempo'];
 
 <div class="row">
   <div class="col-6 offset-3 d-flex align-items-center justify-content-center">
-    <a href="index.php" class="btn btn-secondary">Nova Consulta</a>
+    <a href="index.php" class="btn btn-primary mt-5 mb-4">Nova Consulta</a>
   </div>
 </div>
 

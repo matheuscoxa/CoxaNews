@@ -28,7 +28,8 @@ if ($status == 200 && $res) {
   $_SESSION['tempo'] = $res;
   header('Location: tempo.php');
 } else if ($status == 404) {
-  header('Location: index.php?message=Cidade não encontrada');
+  $_SESSION['message'] = "Cidade não encontrada";
+  header('Location: index.php');
 } else {
   error_log($status);
   if ($res) {
